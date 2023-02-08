@@ -1,32 +1,32 @@
 .form {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
-    @apply w-[400px]  flex flex-col gap-5 p-10;
+    @apply w-[400px] flex flex-col gap-2 p-10;
 }
 
 .input {
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     @apply h-10 text-lg text-start p-4
 }
 
-.label{
-    @apply font-bold
+.label {
+    @apply font-bold text-sm
 }
 
-.formButton{
+.formButton {
     border-radius: 10px;
     color: white;
-    @apply bg-black  h-10 
+    @apply bg-black h-10 flex justify-center items-center
 }
 
-.formImage{
+.formImage {
     position: relative;
-    left: 290px;
+    left: 275px;
     top: -30px;
 }
 
-.formDiv{
+.formDiv {
     display: flex;
     flex-direction: column;
 }
