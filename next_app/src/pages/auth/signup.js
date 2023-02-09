@@ -94,6 +94,7 @@ export default function signup() {
 
         <p className='text-2xl'>Welcome !</p>
         <p className='text-3xl font-bold'>Sign up to</p>
+        
         <p className='text-sm mb-5'>Task Manager</p>
 
 

@@ -42,7 +42,7 @@ export default async function userDetails(req, res) {
     } else if (req.method === "POST") {
         const { token } = req.headers;
         const { task } = req.body;
-
+        
         try {
 
             const { _id } = jwt.verify(token, process.env.TOKEN);
