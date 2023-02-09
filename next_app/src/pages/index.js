@@ -82,12 +82,14 @@ export default function Home({ userData, allTasks }) {
         <p className="text-lg font-bold">Tasks for {day} {month}, {year} </p>
 
         <div className="h-[150px]">
-          {
-            data && data.map((ele, i) => {
-              return <li key={i}>{ele.taskname || ele}</li>
+          <ul>
+            {
+              data && data.map((ele, i) => {
+                return <li key={i}>{ele.taskname || ele}</li>
 
-            })
-          }
+              })
+            }
+          </ul>
         </div>
 
         <input onChange={(e) => setTask(e.target.value)} placeholder="Eg. Need to finish my assignment" className={styles.dashboard_input} />
