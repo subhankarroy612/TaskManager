@@ -101,7 +101,7 @@ export default function Home({ userData, allTasks }) {
   )
 }
 
-async function getServerSideProps(context) {
+export async function getServerSideProps(context) {
 
   let res;
   const getData = async () => {
