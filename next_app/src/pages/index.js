@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 export default function Home({ userData, allTasks }) {
   const [data, setData] = useState([]);
   // useEffect(() => {
-  //   setData(allTasks)
+  setData(allTasks)
   // }, []);
 
   const [task, setTask] = useState('')
