@@ -3,12 +3,14 @@ import { taskModel } from "@/models/task.model";
 import jwt from 'jsonwebtoken'
 import 'dotenv/config';
 import mongoose from "mongoose";
+import { handler } from "./_cors";
 
 const { connectDb } = require("./_connect");
 
 connectDb()
 
 export default async function userDetails(req, res) {
+    await handler(req, res)
     if (req.method === "GET") {
         const { token } = req.headers;
         try {

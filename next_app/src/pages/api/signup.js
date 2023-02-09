@@ -1,10 +1,12 @@
 import { userModel } from "@/models/user.model";
+import { handler } from "./_cors";
 
 const { connectDb } = require("./_connect");
 
 connectDb()
 
 export default async function signup(req, res) {
+    await handler(req, res)
     if (req.method == "POST") {
         const { username, email, password } = req.body
         try {
