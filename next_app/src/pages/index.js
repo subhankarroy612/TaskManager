@@ -9,9 +9,9 @@ import { useEffect, useState } from "react";
 
 export default function Home({ userData, allTasks }) {
   const [data, setData] = useState([]);
-  // useEffect(() => {
-  setData(allTasks)
-  // }, []);
+  useEffect(() => {
+    setData(allTasks)
+  }, [data]);
 
   const [task, setTask] = useState('')
   const router = useRouter()
