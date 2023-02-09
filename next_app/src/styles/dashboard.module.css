@@ -1,0 +1,15 @@
+.dashboard {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @apply w-[600px]  gap-10 flex flex-col p-10
+}
+
+.dashboard_button {
+    border-radius: 10px;
+    @apply w-full bg-black text-white h-[60px] font-bold
+}
+
+.dashboard_input {
+    border-radius: 10px;
+    @apply w-full h-[60px] border-solid border-2 border-black text-center text-lg
+}

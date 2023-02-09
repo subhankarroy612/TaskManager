@@ -5,7 +5,7 @@ import { url } from '@/components/url';
 import axios from 'axios'
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-
+import Cookies from 'js-cookie'
 
 
 
@@ -26,7 +26,8 @@ export default function login() {
         autoClose: 2000,
         type: "success"
       });
-      localStorage.setItem('task', res.data)
+      localStorage.setItem('task', res.data);
+      Cookies.set('task', res.data)
       router.push('/')
     } catch (e) {
       console.log(e.message);
@@ -85,6 +86,10 @@ export default function login() {
         <button disabled={loading} className={styles.formButton} type='submit'>{loading ? <img width='30px' src='https://cdn-icons-png.flaticon.com/512/3305/3305803.png' /> : 'LOGIN'}</button>
         <Link className='text-center' href='/auth/signup'> <span style={{ color: 'gray' }}>Don't have an account?</span> Register </Link>
       </form>
+
+      <div className={styles.signup_img}>
+        <img src='https://i.imgur.com/oWytCBR.png' alt='postimg' />
+      </div>
 
     </div>
   )

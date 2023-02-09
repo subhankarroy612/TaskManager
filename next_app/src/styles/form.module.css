@@ -7,7 +7,7 @@
 .input {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    @apply h-10 text-lg text-start p-4
+    @apply h-10 text-lg text-start p-4 w-[330px]
 }
 
 .label {
@@ -29,4 +29,14 @@
 .formDiv {
     display: flex;
     flex-direction: column;
+}
+
+.signup_img{
+  @apply p-10
+}
+
+@media screen and (max-width:768px) {
+    .signup_img{
+        display: none;
+    }
 }

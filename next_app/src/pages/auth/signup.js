@@ -87,7 +87,8 @@ export default function signup() {
   }
 
   return (
-    <div className='w-full h-screen flex justify-center items-center'>
+    <div className='w-full h-screen flex flex-row justify-center items-center p-10'>
+
 
       <form className={styles.form} onSubmit={handleSubmit}>
 
@@ -118,6 +119,11 @@ export default function signup() {
         <button disabled={loading} className={styles.formButton} type='submit'>{loading ? <img width='30px' src='https://cdn-icons-png.flaticon.com/512/3305/3305803.png' /> : 'REGISTER'}</button>
         <Link className='text-center' href='/auth/login'> <span style={{ color: 'gray' }}>Already have an account?</span> Login</Link>
       </form>
+
+
+      <div className={styles.signup_img}>
+        <img src='https://i.imgur.com/oWytCBR.png' alt='postimg' />
+      </div>
 
     </div>
   )
