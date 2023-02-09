@@ -7,7 +7,7 @@
 .input {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    @apply h-10 text-lg text-start p-4 w-[330px]
+    @apply h-10 text-lg text-start p-4 w-[320px]
 }
 
 .label {
