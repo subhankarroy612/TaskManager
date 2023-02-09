@@ -19,9 +19,15 @@ export default async function userDetails(req, res) {
             if (!userDetails)
                 return res.status(401).send('Unauthorised!')
 
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth();
+            let day = date.getDate();
+            let finalDate = year + '/' + (month + 1) + '/' + day
+
             let allTasks = await taskModel.aggregate([
                 { $match: { userId: mongoose.Types.ObjectId(userDetails._id) } },
-                { $match: { date: Math.floor(Date.now() / 86400000) } } // number in miliSec 86400000 = 24hrs
+                { $match: { date: finalDate } } 
             ])
 
             res.status(200).send({ userDetails, allTasks })
@@ -40,8 +46,14 @@ export default async function userDetails(req, res) {
         try {
 
             const { _id } = jwt.verify(token, process.env.TOKEN);
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth();
+            let day = date.getDate();
+            let finalDate = year + '/' + (month + 1) + '/' + day
 
-            const newTask = new taskModel({ userId: _id, taskname: task, date: Math.floor(Date.now() / 86400000) })
+            // const newTask = new taskModel({ userId: _id, taskname: task, date: Math.floor(Date.now() / 86400000) })
+            const newTask = new taskModel({ userId: _id, taskname: task, date: finalDate })
             await newTask.save()
             return res.status(201).send('Task created!')
 
