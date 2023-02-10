@@ -2,7 +2,7 @@
 
 <p>
 This was a solo project.
-Goal behind the Hackathon was to create a full stack application with next.js with all the major functionalities, such as  Authentication, Authorisation, login, register and dashboard page.
+Goal behind this project was to create a full stack application with next.js with all the major functionalities, such as  Authentication, Authorisation, login, register and dashboard page.
 </p>
 
 
@@ -36,8 +36,6 @@ ___
 
 
  ## Glipms of project
-__
-
 
    - Login 
 <img src="https://i.imgur.com/HEm8MP0.png" alt="login" />
